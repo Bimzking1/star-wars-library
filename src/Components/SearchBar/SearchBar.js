@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import style from "./SearchBar.module.css"
 
-const SearchBar = () => {
+const SearchBar = (props) => {
 
     const [characterOptions, setCharacterOptions] = useState(['option1', 'option2'])
     const [planetOptions, setPlanetOptions] = useState(['option1', 'option2'])
@@ -48,8 +48,14 @@ const SearchBar = () => {
     },[])
 
     const { register, handleSubmit } = useForm()
-    const onSubmit = (data) => {
-        console.log(data)
+    const onSubmit = (formData) => {
+        fetch('https://swapi.dev/api/films')
+        .then( response => {
+            return response.json()
+        })
+        .then( data => {
+            props.setMovieList([...data.results])
+        })
     }
 
     return (
