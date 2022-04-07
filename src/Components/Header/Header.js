@@ -1,9 +1,22 @@
 import React from 'react'
 import style from './Header.module.css'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <img src="/images/logo.png" alt="Star Wars" className={style.logo}/>
+    <>
+      <Link to="/">
+        <img src="/images/logo.png" alt="Star Wars" className={style.logo}/>
+      </Link>
+      <div className={style.watermark}>
+        <div className={style.cinema}>
+          Bimo
+        </div>
+        <div className={style.xxi}>
+          XXI
+        </div>
+      </div>
+    </>
   )
 }
 

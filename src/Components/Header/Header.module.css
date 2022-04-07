@@ -1,7 +1,36 @@
+@font-face {
+    font-family: 'edwardian';
+    src: url('../../Assets/Edward/EdwardianScriptITC.ttf') 
+}
+
+@font-face {
+    font-family: 'goudy';
+    src: url('../../Assets/Goudy/Goudy\ Handtooled\ Std\ Regular.otf') 
+}
+
 .logo {
     width: 300px;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+.watermark{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    margin: 10px 0px 10px 0px;
+    color: #b7a06d;
+}
+
+.cinema{
+    font-family: 'edwardian', sans-serif;
+    margin-right: 15px;
+    font-size: 52px;
+}
+
+.xxi{
+    font-family: 'goudy', sans-serif;
+    font-size: 45px;
 }
